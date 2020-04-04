@@ -51,5 +51,12 @@ public class Main {
         IFigure square = AbstractFactory.create(4,4, Figure.SQUARE);
 
         IFigure rectangle = AbstractFactory.create(5,4, Figure.MYRECTANGLE);
+
+        MyRectangle newRectangle = new MyRectangle.Builder()
+                .setSideA(4.5)
+                .setSideB(3.5)
+                .build();
+
+        System.out.println(newRectangle);
     }
 }

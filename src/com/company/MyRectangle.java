@@ -62,4 +62,32 @@ public class MyRectangle extends Rectangle implements IFigure {
     public double getPerimeter() {
         return 0;
     }
+
+    public static class Builder{
+        private MyRectangle rectangleToBuild;
+
+        public Builder() {
+            this.rectangleToBuild = new MyRectangle();
+        }
+
+        public Builder setSimilarTo(MyRectangle rectangle) {
+            this.rectangleToBuild.sideA = rectangle.sideA;
+            this.rectangleToBuild.sideB = rectangle.sideB;
+            return this;
+        }
+
+        public Builder setSideA (double side) {
+            rectangleToBuild.setSideA(side);
+            return this;
+        }
+
+        public Builder setSideB (double side) {
+            rectangleToBuild.setSideB(side);
+            return this;
+        }
+
+        public MyRectangle build() {
+            return rectangleToBuild;
+        }
+    }
 }
