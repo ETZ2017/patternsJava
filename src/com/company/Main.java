@@ -46,7 +46,7 @@ public class Main {
         MyRectangle r3 = RectangleFactory.createStatic(5, 4);
         System.out.println(r3.toString());*/
 
-        IFigure triangle = AbstractFactory.create(3,4,5, Figure.TRIANGLE);
+        //IFigure triangle = AbstractFactory.create(3,4,5, Figure.TRIANGLE);
 
         IFigure square = AbstractFactory.create(4,4, Figure.SQUARE);
 
@@ -57,6 +57,7 @@ public class Main {
                 .setSideB(3.5)
                 .build();
 
-        System.out.println(newRectangle);
+        System.out.println(newRectangle.toString());
+
     }
 }

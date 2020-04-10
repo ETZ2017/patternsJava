@@ -9,11 +9,11 @@ public class AbstractFactory {
         }
     }
 
-    public static IFigure create (double a, double b, double c, Figure figure) {
+    /*public static IFigure create (double a, double b, double c, Figure figure) {
         switch (figure){
             case TRIANGLE: return (IFigure) TriangleFactory.create(a, b, c);
             default: return null;
         }
 
-    }
+    }*/
 }

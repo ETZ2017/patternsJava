@@ -66,6 +66,14 @@ public class MyRectangle extends Rectangle implements IFigure {
     public static class Builder{
         private MyRectangle rectangleToBuild;
 
+        public double getSideBBuild() {
+            return rectangleToBuild.sideB;
+        }
+
+        public double getSideABuild() {
+            return rectangleToBuild.sideA;
+        }
+
         public Builder() {
             this.rectangleToBuild = new MyRectangle();
         }
@@ -87,7 +95,12 @@ public class MyRectangle extends Rectangle implements IFigure {
         }
 
         public MyRectangle build() {
-            return rectangleToBuild;
+            if (this.getSideABuild() != 0 && this.getSideBBuild() !=0 ) {
+                return rectangleToBuild;
+            } else {
+                return null;
+            }
+
         }
     }
 }
