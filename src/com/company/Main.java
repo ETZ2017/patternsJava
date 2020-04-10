@@ -57,7 +57,12 @@ public class Main {
                 .setSideB(3.5)
                 .build();
 
-        System.out.println(newRectangle.toString());
+        if(newRectangle != null) {
+            System.out.println(newRectangle.toString());
+        } else {
+            System.out.println("Wrong data entered");
+        }
+
 
     }
 }
